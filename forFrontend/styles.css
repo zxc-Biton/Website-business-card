@@ -257,11 +257,12 @@ button:hover{
     border-radius: 20px;
     border-style: none;
     font-size: 20px;
+    left: 25px;
     padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 300px;
     padding-top: 50px;
     padding-bottom: 50px;
-    background: linear-gradient(120deg, #b10c00, rgba(0, 2, 0, 0) 60%);
+    background: linear-gradient(120deg, #b10c00, rgba(0, 2, 0, 0) 80%);
     position: absolute;
     margin: 25px;
     top: 100px;
@@ -272,12 +273,13 @@ button:hover{
 .myHobby {
     position: absolute;
     background: linear-gradient(120deg, #b10c00, rgba(0, 2, 0, 0) 60%);
+    left: 25px;
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
-    top: 530px;
     margin: 25px;
+    margin-top: 30%;
     right: 873px;
     border-radius: 20px;
     z-index: -5;
@@ -289,9 +291,10 @@ button:hover{
 }
 
 #myPhoto {
-    position: relative;
-    padding-left: 25px;
-    top: 360px;
+    position: absolute;
+    right: 85px;
+    margin: 25px;
+    top: 100px;
     max-width: 20%;
     z-index: 1;
 }
@@ -312,8 +315,8 @@ button:hover{
 .sfchik {
     z-index: -6;
     position: absolute;
-    left: 20px;
-    top: 0px;
+    right: -60px;
+    top: 50%;
 }
 
 #bglight {
@@ -324,9 +327,27 @@ button:hover{
     width: 50px;
     height: 50px;
     background-color: #b10c00;
-    box-shadow: 0 0 250px 350px rgb(179, 36, 0);
+    box-shadow: 0 0 350px 350px rgb(179, 36, 0);
     z-index: -6;
 
+}
+
+.social-networks {
+    display: flex;
+    position: absolute;
+    top: 85%;
+    margin-left: 25px;
+}
+
+.social-networks a img {
+    width: 125px;
+    height: 125px;
+    padding: 25px;
+}
+
+#tt {
+    width: 180px;
+    height: auto;
 }
 
 /*gallery*/
