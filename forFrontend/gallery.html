@@ -5,6 +5,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>my gallery</title>
             <link rel="stylesheet" href="../forFrontend/styles.css">
+            <script src="https://kit.fontawesome.com/f39a29c704.js" crossorigin="anonymous"></script>
         </head>
     <body>
     
@@ -14,10 +15,10 @@
 
                 <nav>
                     <ul id="blue">
-                        <li><a href="index.html">Main page</a></li>
-                        <li><a href="about_me.html">About me</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="scheduale.html">My schedule</a></li>
+                        <li><a href="index.html">Main page<i class="fa-solid fa-house"></i></a></li>
+                        <li><a class="abt-me" href="about_me.html">About me<i class="fa-solid fa-id-badge"></i></a></li>
+                        <li><a class="glr" href="gallery.html">Gallery<i class="fa-solid fa-image"></i></a></li>
+                        <li><a class="schdle" href="scheduale.html">My schedule<i class="fa-solid fa-calendar"></i></a></li>
                     </ul>
                 </nav>
 
@@ -26,19 +27,24 @@
             <br>
             <br>
 
+    <div class="cnteGallery">
         <div class="gallery" style="text-align: center;">
-            <img src="../img/USA.jpg" alt="My gallery" height="500" width="500">
-            <img src="../img/me.jpg" alt="My gallery" height="500" width="500">
-            <img src="../img/bridge.jpg" alt="My gallery" height="500" width="500"><br>
-            <img src="../img/kemping.jpg" alt="My gallery" height="500" width="500">
-            <img src="../img/shos.jpg" alt="My gallery" height="500" width="500">
+            <img src="../img/USA.jpg" alt="My gallery">
+            <img src="../img/me.jpg" alt="My gallery">
+            <img src="../img/bridge.jpg" alt="My gallery">
+            <img src="../img/kemping.jpg" alt="My gallery">
+            <img src="../img/shos.jpg" alt="My gallery">
+            <img src="../img/airplane.jpg" alt="My gallery">
         </div>
+    </div>
 
         <div>
             <img id="morph1" src="../img/Base_morphling.jpg" alt="">
             <img id="morph2" src="../img/Base_morphling.jpg" alt="">
             <img id="voda" src="../img/voda.png" alt="">
         </div>
+
+        <div id="bg-gallery"></div>
     
     </body>
 </html>
