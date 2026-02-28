@@ -22,6 +22,12 @@ section {
     position: relative;
 }
 
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
 nav {
     background: none;
     width: 100%;
@@ -40,16 +46,18 @@ header.Logo {
 
 .Logo {
     display: flex;
+    position: fixed;
+    top: 0px;
     padding-left: 25px;
     padding-top: 40px;
     font-size: 25px;
     font-weight: bold;
-    position: absolute;
 }
 
 header nav {
-    float: right;
-    margin-right: 25%;
+    position: fixed;
+    top: 0px;
+    right: 25%;
     width: 50%;
 }
 
@@ -84,7 +92,7 @@ header nav ul li a:hover {
     box-shadow: 0 0 30px 15px rgb(0, 80, 0);
 }
 
-.fa-solid {   /*значки біля навігації*/
+.fa-house, .fa-id-badge, .fa-image, .fa-calendar{   /*значки біля навігації*/
     margin-left: 7px;
 }
 
@@ -147,14 +155,14 @@ a {
 }
 
 .Circle {
-    width: 50px;
-    height: 50px;
+    width: 0px;
+    height: 0px;
     background-color: rgb(0, 75, 0);
     box-shadow: 0 0 250px 250px rgb(0, 122, 0);
     border-radius: 50%;
     position: absolute;
     left: 145%;
-    top: 730px;
+    top: 520px;
     transform: translateY(-550%);
     z-index: 1;
 }
@@ -255,7 +263,7 @@ button:hover{
 #dota1 {
     position: absolute;
     transform: rotate(35deg);
-    right: 1400px;
+    right: 70dvw;
     top: 170px;
     
 }
@@ -263,7 +271,7 @@ button:hover{
 #dota2 {
     position: absolute;
     transform: rotate(35deg);
-    left: 1400px;
+    left: 75dvw;
     top: 20px;
 }
 
@@ -271,21 +279,25 @@ button:hover{
 
 .about-me {
     line-height: 30px;
-    max-width: 70%;
+    max-width: 90%;
     border-radius: 20px;
     border-style: none;
     font-size: 20px;
     left: 25px;
     padding-left: 100px;
     padding-right: 300px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background: linear-gradient(120deg, #b10c00, rgba(0, 2, 0, 0) 80%);
     position: absolute;
     margin: 25px;
     top: 100px;
     right: 1px;
     z-index: -5;
+}
+
+.abt-me-other-device {
+    display: none;
 }
 
 .myHobby {
@@ -296,10 +308,10 @@ button:hover{
     left: 25px;
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin: 25px;
-    margin-top: 30%;
+    margin-top: 28dvw;
     right: 873px;
     border-radius: 20px;
     z-index: -5;
@@ -309,6 +321,7 @@ button:hover{
     list-style: none;
 
 }
+
 
 #myPhoto {
     position: absolute;
@@ -391,11 +404,46 @@ button:hover{
     height: 350px;
     width: auto;
     margin-bottom: 50px;
-    z-index: 2;
+}
+
+#scroll-top {
+    background-color: rgba(0, 115, 187, 0);
+    position: fixed;
+    bottom: 100px;
+    right: 130px;
+    padding: 13px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    z-index: 6;
+    transition: all 1000ms ease;
+}
+
+#scroll-top:hover {
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 50px 25px rgb(0, 37, 187);
+    background-color: rgba(0, 37, 187, 0.815);
+    transition: all 500ms ease;
+}
+
+.fa-arrow-up{
+    position: fixed;
+    right: 135px;
+    bottom: 110px;
+    color: rgb(16, 16, 16);
+    font-size: 40px;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 #bg-gallery {
-    position: absolute;
+    background-color: rgb(0, 146, 204);
+    position: fixed;
     height: 20px;
     width: 100%;
     top: 80%;
@@ -405,7 +453,7 @@ button:hover{
 }
 
 #morph1 {
-    position: absolute;
+    position: fixed;
     height:800px;
     width: auto;
     top: 100px;
@@ -414,7 +462,7 @@ button:hover{
 }
 
 #morph2 {
-    position: absolute;
+    position: fixed;
     height:800px;
     width: auto;
     top: 100px;
@@ -424,8 +472,264 @@ button:hover{
 }
 
 #voda {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    top: -650px;
+    height: auto;
+    top: -30dvw;
     z-index: -2;
+}
+
+/*scheduale*/
+
+#bg-for-void-spirit {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: rgb(136, 0, 177);
+    width: 1px;
+    height: 100%;
+    box-shadow: 0 0 120vw 45vw rgba(136, 0, 177, 0.7),
+                0 0 160vw 70vw rgba(136, 0, 177, 0.4);
+    z-index: -99;
+}
+
+#void {
+    position: absolute;
+    transform: scaleX(-1);
+    height: 800px;
+    width: auto;
+    top: 7vw;
+    left: -7vw;
+}
+
+#myscheduale {
+    position: relative;
+    font-size: 18px;
+    top: 7vw;
+    left: 76.5vw;
+    background: rgb(106, 0, 167);
+    padding: 20px;
+    padding-left: 50px;
+    border-radius: 50vw;
+    transition: all 1000ms ease;
+}
+
+#myscheduale:hover {
+    left: 32vw;
+    transition: all 1000ms ease;
+}
+
+#cldrFebruar {
+    position: relative;
+    top: 13vw;
+    left: 80vw;
+    background: rgb(106, 0, 167);
+    padding: 20px;
+    padding-left: 60px;
+    border-radius: 50vw;
+    transition: all 1000ms ease;
+}
+
+#cldrFebruar:hover {
+    left: 40vw;
+    transition: all 1000ms ease;
+}
+
+#holidays {
+    position: absolute;
+    left: 20vw;
+    top: 3.5vw;
+}
+
+/*optimization for other device*/
+
+
+
+@media screen and (max-width: 1400px) {
+    .Logo {
+        display: none;
+    }
+
+    .left-block {
+        min-width: 500px;
+    }
+
+    .btn {
+        position: fixed;
+        margin-top: 20dvw;
+    }
+
+    /*ABOUT ME*/
+
+    .about-me {
+        display: none;
+    }
+
+    .myHobby {
+        position: relative;
+        margin: 10px;
+        margin-top: 15dvw;
+        top: -200px;
+        min-width: 40dvw;
+        line-height: 2dvw;
+        padding: 30px;
+        left: 25px;
+    }
+
+    #myPhoto img {
+        position: absolute;
+        right: -7dvw;
+        width: 30dvw;
+        height: auto;
+    }
+
+    .abt-me-other-device {
+        display:inline-block;
+        background: linear-gradient(120deg, #b10c00, rgba(0, 2, 0, 0) 80%);
+        position: relative;
+        border-radius: 20px;
+        padding: 30px;
+        margin: 10px;
+        top: 15dvw;
+        left: 25px;
+    }
+
+    /*FORM*/
+
+    #dota1 {
+        right: 60dvw;
+    }
+
+    #dota2 {
+        left: 65dvw;
+    }
+
+    /*GALLERY*/
+
+    #voda {
+        position: fixed;
+        top: -16dvw;
+    }
+
+    /*SCHEDUALE*/
+
+    #myscheduale {
+        font-size: 13px;
+    }
+
+    #myscheduale:hover {
+        left: 25dvw;
+    }
+
+    #cldrFebruar {
+        padding-left: 5dvw;
+    }
+
+    #cldrFebruar:hover {
+        left: 34dvw;
+    }
+
+    #holidays {
+    left: 34vw;
+    }
+
+
+}
+
+
+@media screen and (max-width: 930px){
+    .right-block img {
+        display: none;
+    }
+
+    .Circle {
+        max-width: 0px;
+        max-height: 0px;
+        z-index: -99;
+    }
+
+    .btn {
+        max-height: 85px;
+        white-space: nowrap;
+        margin-top: 20dvw;
+    }
+
+    .left-block {
+        margin-left: -10dvw;
+    }
+
+    /*ABOUT ME*/
+
+    .myHobby {
+        position: absolute;
+        top: 7dvw;
+        margin: 10px;
+        margin-top: 15dvw;
+        min-width: 40dvw;
+        line-height: 3dvw;
+        padding: 30px;
+        left: 25px;
+    }
+
+    /*FORM*/
+
+    #dota1 {
+        right: 40dvw;
+        top: -13dvw;
+        z-index: -10;
+    }
+
+    #dota2 {
+        top: 30dvw;
+        left: 40dvw;
+        z-index: -10;
+    }
+
+    /*GALLERY*/
+
+    #voda {
+        top: 5dvw;
+    }
+
+    /*SCHEDUALE*/
+
+    #void {
+        left: -30dvw;
+    }
+
+    #myscheduale {
+        top: 20dvw;
+        font-size: 12px;
+    }
+
+    #myscheduale:hover {
+        left: 9dvw;
+    }
+
+    #cldrFebruar {
+        left: 57dvw;
+        padding-left: 10dvw;
+        top: 30dvw;
+    }
+
+    #cldrFebruar:hover {
+        left: 15dvw;
+    }
+
+    #holidays {
+        
+        left: 45dvw;
+    }
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 1800px) {
+    .myHobby {
+        margin-top: 38dvw;
+    }
 }
